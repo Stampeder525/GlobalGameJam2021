@@ -35,16 +35,14 @@ public class SwapViews : MonoBehaviour
                 firstPersonController.SetActive(false);
                 firstPersonController.transform.position = gameObject.transform.position;
                 firstPersonController.transform.rotation = gameObject.transform.rotation;
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 thirdPersonController.enabled = true;
                 firstPersonState = 0;
                 break;
             }
             case 1: {
                 thirdPersonController.enabled = false;
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-                firstPersonController.transform.position = gameObject.transform.position;
-                firstPersonController.transform.rotation = gameObject.transform.rotation;
+                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 firstPersonController.SetActive(true);
                 firstPersonState = 1;
                 break;

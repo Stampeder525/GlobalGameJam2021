@@ -788,6 +788,13 @@ namespace ECM.Components
 
             if (direction.sqrMagnitude < 0.0001f)
                 return;
+
+            // CUSTOM ADDITION TO ALLOW WALKING BACKWARDS FOR 3RD PERSON CAMERA. REMOVE IF STATIONARY CAMERA.
+            Debug.Log("Direction: " + direction);
+            if(Vector3.Dot(transform.forward, direction) <= -0.45) {
+                direction.z *= -1;
+                direction.x *= -1;
+            }
             
             var targetRotation = Quaternion.LookRotation(direction, transform.up);
             var newRotation = Quaternion.Slerp(cachedRigidbody.rotation, targetRotation,

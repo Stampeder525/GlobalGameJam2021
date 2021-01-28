@@ -108,6 +108,8 @@ namespace ECM.Examples
             // Compute move vector in local space
 
             var move = transform.InverseTransformDirection(moveDirection);
+        
+
 
             // Update the animator parameters
 
@@ -116,6 +118,7 @@ namespace ECM.Examples
                 : Mathf.InverseLerp(0.0f, runSpeed, movement.forwardSpeed);
 
             animator.SetFloat("Forward", forwardAmount, 0.1f, Time.deltaTime);
+            
             animator.SetFloat("Turn", Mathf.Atan2(move.x, move.z), 0.1f, Time.deltaTime);
 
             animator.SetBool("OnGround", movement.isGrounded);
