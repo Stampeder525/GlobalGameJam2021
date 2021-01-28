@@ -14,7 +14,7 @@ namespace ECM.Examples
     /// 
     /// </summary>
 
-    public sealed class CustomCharacterController : BaseCharacterController
+    public class CustomCharacterController : BaseCharacterController
     {
         #region EDITOR EXPOSED FIELDS
 
