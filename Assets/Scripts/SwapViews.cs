@@ -38,6 +38,7 @@ public class SwapViews : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 thirdPersonController.enabled = true;
                 firstPersonState = 0;
+                RenderSettings.fogDensity = 0.03f;
                 break;
             }
             case 1: {
@@ -45,6 +46,7 @@ public class SwapViews : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 firstPersonController.SetActive(true);
                 firstPersonState = 1;
+                RenderSettings.fogDensity = 0.05f;
                 break;
             }
             default: {
@@ -53,6 +55,7 @@ public class SwapViews : MonoBehaviour
                 firstPersonController.transform.rotation = gameObject.transform.rotation;
                 thirdPersonController.enabled = true;
                 firstPersonState = 1;
+                RenderSettings.fogDensity = 0.03f;
                 break;
             }
         }

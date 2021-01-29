@@ -802,7 +802,6 @@ namespace ECM.Components
             if (direction.sqrMagnitude < 0.0001f)
                 return;
 
-            Debug.Log(direction);
             if(tankControls && (Vector3.Dot(transform.forward, direction) < -0.4f)) {
                 direction.x *= -1;
                 direction.z *= -1;
