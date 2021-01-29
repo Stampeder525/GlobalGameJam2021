@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -227,6 +227,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5147586641223887829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &169276014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169276013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413f23fc1b9daea408b76cdac3bd18af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxLateralSpeed: 10
+  _maxRiseSpeed: 20
+  _maxFallSpeed: 20
+  _useGravity: 1
+  _gravity: {x: 0, y: -30, z: 0}
+  _slideOnSteepSlope: 0
+  _slopeLimit: 45
+  _slideGravityMultiplier: 2
+  _snapToGround: 1
+  _snapStrength: 0.5
+  _tankControls: 1
 --- !u!4 &169276019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5147586641390786982, guid: 5b97426755ae6954ab971e9e891ea716,
@@ -300,7 +323,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-686490
+  m_Name: pb_Mesh-9442
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -470,10 +493,7 @@ GameObject:
   - component: {fileID: 398779536}
   - component: {fileID: 398779539}
   - component: {fileID: 398779540}
-<<<<<<< HEAD
-=======
   - component: {fileID: 398779541}
->>>>>>> aa89947fe2e4a74465b665593039108035de0a5d
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1142,5 +1162,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 774592429}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5147586641390787002, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
