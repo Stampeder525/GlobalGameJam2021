@@ -5,10 +5,12 @@ using ECM.Examples;
 
 public class SwapViews : MonoBehaviour
 {
-
-    private CustomCharacterController thirdPersonController;
-    private GameObject firstPersonController;
     public int firstPersonState;
+
+    private GameObject firstPersonController;
+    private ECM.Components.MouseLook mouseLook;
+    private CustomCharacterController thirdPersonController;
+
     // Start is called before the first frame update
     void Start()
     {
