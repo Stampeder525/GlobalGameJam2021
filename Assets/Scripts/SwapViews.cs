@@ -31,7 +31,8 @@ public class SwapViews : MonoBehaviour
         if(view == -1) {
             view = (firstPersonState == 1) ? 0 : 1;
         }
-        Debug.Log("VIEW:" + view);
+        StopCoroutine("FadeFog");
+        // Debug.Log("VIEW:" + view);
         switch(view) {
             case 0: {
                 firstPersonController.SetActive(false);
@@ -40,7 +41,8 @@ public class SwapViews : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 thirdPersonController.enabled = true;
                 firstPersonState = 0;
-                RenderSettings.fogDensity = 0.03f;
+                // RenderSettings.fogDensity = 0.03f;
+                StartCoroutine(FadeFog(0.03f));
                 break;
             }
             case 1: {
@@ -48,7 +50,8 @@ public class SwapViews : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 firstPersonController.SetActive(true);
                 firstPersonState = 1;
-                RenderSettings.fogDensity = 0.05f;
+                // RenderSettings.fogDensity = 0.05f;
+                StartCoroutine(FadeFog(0.05f));
                 break;
             }
             default: {
@@ -57,9 +60,17 @@ public class SwapViews : MonoBehaviour
                 firstPersonController.transform.rotation = gameObject.transform.rotation;
                 thirdPersonController.enabled = true;
                 firstPersonState = 1;
-                RenderSettings.fogDensity = 0.03f;
+                // RenderSettings.fogDensity = 0.03f;
+                StartCoroutine(FadeFog(0.03f));
                 break;
             }
+        }
+    }
+
+    IEnumerator FadeFog(float targetDensity) {
+        while(Mathf.Abs(RenderSettings.fogDensity - targetDensity) > 0.001) {
+            RenderSettings.fogDensity = Mathf.SmoothStep(RenderSettings.fogDensity, targetDensity, 8f * Time.deltaTime);
+            yield return null;
         }
     }
 }
