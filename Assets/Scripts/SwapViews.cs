@@ -14,7 +14,7 @@ public class SwapViews : MonoBehaviour
     {
         thirdPersonController = gameObject.GetComponent<CustomCharacterController>();
         firstPersonController = transform.Find("FirstPersonController").gameObject;
-        firstPersonState = 0;
+        SwapView(firstPersonState);
     }
 
     // Update is called once per frame
