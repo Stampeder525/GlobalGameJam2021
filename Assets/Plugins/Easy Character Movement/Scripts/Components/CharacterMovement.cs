@@ -74,6 +74,9 @@ namespace ECM.Components
         [SerializeField]
         private float _snapStrength = 0.5f;
 
+        [SerializeField]
+        private bool _tankControls = true;
+
         #endregion
 
         #region FIELDS
@@ -204,6 +207,16 @@ namespace ECM.Components
         {
             get { return _snapStrength; }
             set { _snapStrength = Mathf.Clamp01(value); }
+        }
+
+        /// <summary>
+        /// Whether or not to use tank controls.
+        /// </summary>
+
+        public bool tankControls
+        {
+            get { return _tankControls; }
+            set { _tankControls = value; }
         }
 
         /// <summary>
@@ -789,6 +802,11 @@ namespace ECM.Components
             if (direction.sqrMagnitude < 0.0001f)
                 return;
             
+            if(tankControls && (Vector3.Dot(transform.forward, direction) < -0.4f)) {
+                direction.x *= -1;
+                direction.z *= -1;
+            }
+
             var targetRotation = Quaternion.LookRotation(direction, transform.up);
             var newRotation = Quaternion.Slerp(cachedRigidbody.rotation, targetRotation,
                 angularSpeed * Mathf.Deg2Rad * Time.deltaTime);

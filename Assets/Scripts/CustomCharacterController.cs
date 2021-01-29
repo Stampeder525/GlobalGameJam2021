@@ -1,26 +1,30 @@
-﻿using ECM.Controllers;
+﻿using ECM.Common;
+using ECM.Controllers;
 using UnityEngine;
 
 namespace ECM.Examples
 {
     /// <summary>
     /// 
-    /// Example Agent Controller
+    /// Example Character Controller
     /// 
-    /// This example shows how to extend the 'BaseAgentController' adding support for different
+    /// This example shows how to extend the 'BaseCharacterController' adding support for different
     /// character speeds (eg: walking, running, etc), plus how to handle custom input extending the
-    /// HandleInput method.
+    /// HandleInput method and make the movement relative to camera view direction.
     /// 
     /// </summary>
 
-    public sealed class CustomAgentController : BaseAgentController
+    public sealed class CustomCharacterController : BaseCharacterController
     {
         #region EDITOR EXPOSED FIELDS
 
         [Header("CUSTOM CONTROLLER")]
+        [Tooltip("The character's follow camera.")]
+        public Transform playerCamera;
+
         [Tooltip("The character's walk speed.")]
         [SerializeField]
-        private float _walkSpeed = 2.0f;
+        private float _walkSpeed = 2.5f;
 
         [Tooltip("The character's run speed.")]
         [SerializeField]
@@ -37,7 +41,7 @@ namespace ECM.Examples
         public float walkSpeed
         {
             get { return _walkSpeed; }
-            set { _walkSpeed = value; }
+            set { _walkSpeed = Mathf.Max(0.0f, value); }
         }
 
         /// <summary>
@@ -47,14 +51,14 @@ namespace ECM.Examples
         public float runSpeed
         {
             get { return _runSpeed; }
-            set { _runSpeed = value; }
+            set { _runSpeed = Mathf.Max(0.0f, value); }
         }
 
         /// <summary>
         /// Walk input command.
         /// </summary>
 
-        public bool walk { get; set; }
+        public bool walk { get; private set; }
 
         #endregion
 
@@ -70,27 +74,28 @@ namespace ECM.Examples
         }
 
         /// <summary>
-        /// Overrides 'BaseAgentController' CalcDesiredVelocity method to handle different speeds,
+        /// Overrides 'BaseCharacterController' CalcDesiredVelocity method to handle different speeds,
         /// eg: running, walking, etc.
         /// </summary>
 
         protected override Vector3 CalcDesiredVelocity()
         {
-            // Modify base controller speed based on this character state
+            // Set 'BaseCharacterController' speed property based on this character state
 
             speed = GetTargetSpeed();
 
-            // Call the parent class' version of method
+            // Return desired velocity vector
 
             return base.CalcDesiredVelocity();
         }
 
         /// <summary>
-        /// Overrides 'BaseAgentController' Animate method.
+        /// Overrides 'BaseCharacterController' Animate method.
         /// 
         /// This shows how to handle your characters' animation states using the Animate method.
         /// The use of this method is optional, for example you can use a separate script to manage your
         /// animations completely separate of movement controller.
+        /// 
         /// </summary>
 
         protected override void Animate()
@@ -107,7 +112,7 @@ namespace ECM.Examples
             // Update the animator parameters
 
             var forwardAmount = animator.applyRootMotion
-                ? Mathf.InverseLerp(0.0f, runSpeed, move.z * speed) * brakingRatio
+                ? Mathf.InverseLerp(0.0f, runSpeed, move.z * speed)
                 : Mathf.InverseLerp(0.0f, runSpeed, movement.forwardSpeed);
 
             animator.SetFloat("Forward", forwardAmount, 0.1f, Time.deltaTime);
@@ -122,20 +127,52 @@ namespace ECM.Examples
         }
 
         /// <summary>
-        /// Overrides 'BaseAgentController' HandleInput,
-        /// extending it to add walk input.
+        /// Overrides 'BaseCharacterController' HandleInput,
+        /// to perform custom controller input.
         /// </summary>
 
         protected override void HandleInput()
         {
-            // Call the parent class' version of method,
-            // the one performs click-to-move
+            // Handle your custom input here...
 
-            base.HandleInput();
-
-            // Adds walk input
+            moveDirection = new Vector3
+            {
+                x = Input.GetAxisRaw("Horizontal"),
+                y = 0.0f,
+                z = Input.GetAxisRaw("Vertical")
+            };
 
             walk = Input.GetButton("Fire3");
+
+            jump = Input.GetButton("Jump");
+
+            crouch = Input.GetKey(KeyCode.C);
+
+
+            // Transform moveDirection vector to be relative to camera view direction
+
+            moveDirection = moveDirection.relativeTo(playerCamera);
+        }
+
+        #endregion
+
+        #region MONOBEHAVIOUR
+
+        /// <summary>
+        /// Overrides 'BaseCharacterController' OnValidate method,
+        /// to perform this class editor exposed fields validation.
+        /// </summary>
+
+        public override void OnValidate()
+        {
+            // Validate 'BaseCharacterController' editor exposed fields
+
+            base.OnValidate();
+
+            // Validate this editor exposed fields
+
+            walkSpeed = _walkSpeed;
+            runSpeed = _runSpeed;
         }
 
         #endregion

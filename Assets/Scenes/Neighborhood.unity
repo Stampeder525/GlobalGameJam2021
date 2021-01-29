@@ -470,9 +470,6 @@ GameObject:
   - component: {fileID: 398779536}
   - component: {fileID: 398779539}
   - component: {fileID: 398779540}
-  - component: {fileID: 398779543}
-  - component: {fileID: 398779542}
-  - component: {fileID: 398779541}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1099,6 +1096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147586641390787002, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: _tankControls
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147586641390787003, guid: 5b97426755ae6954ab971e9e891ea716,
         type: 3}
