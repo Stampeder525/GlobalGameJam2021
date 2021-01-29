@@ -1060,7 +1060,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-693478
+  m_Name: pb_Mesh-396576
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1332,6 +1332,11 @@ PrefabInstance:
     - target: {fileID: 5147586641390787002, guid: 5b97426755ae6954ab971e9e891ea716,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147586641390787002, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: _tankControls
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147586641390787003, guid: 5b97426755ae6954ab971e9e891ea716,
@@ -1699,6 +1704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StationaryCam
       objectReference: {fileID: 0}
+    - target: {fileID: 5630579020643288931, guid: c0b68cba002c4e140a472222937727f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5630579020643288932, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
       propertyPath: m_LookAt
@@ -1727,22 +1737,22 @@ PrefabInstance:
     - target: {fileID: 5630579020643288933, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.096765585
+      value: 0.26735845
       objectReference: {fileID: 0}
     - target: {fileID: 5630579020643288933, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.0027778475
       objectReference: {fileID: 0}
     - target: {fileID: 5630579020643288933, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.00077074143
       objectReference: {fileID: 0}
     - target: {fileID: 5630579020643288933, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9953072
+      value: 0.9635929
       objectReference: {fileID: 0}
     - target: {fileID: 5630579020643288933, guid: c0b68cba002c4e140a472222937727f5,
         type: 3}
@@ -1777,6 +1787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ThirdPersoncam
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878691031810647444, guid: 68027c474e4dbf54e9a4db871034c9c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647445, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}

@@ -74,6 +74,9 @@ namespace ECM.Components
         [SerializeField]
         private float _snapStrength = 0.5f;
 
+        [SerializeField]
+        private bool _tankControls = true;
+
         #endregion
 
         #region FIELDS
@@ -204,6 +207,16 @@ namespace ECM.Components
         {
             get { return _snapStrength; }
             set { _snapStrength = Mathf.Clamp01(value); }
+        }
+
+        /// <summary>
+        /// Whether or not to use tank controls.
+        /// </summary>
+
+        public bool tankControls
+        {
+            get { return _tankControls; }
+            set { _tankControls = value; }
         }
 
         /// <summary>
@@ -790,8 +803,7 @@ namespace ECM.Components
                 return;
 
             // CUSTOM ADDITION TO ALLOW WALKING BACKWARDS FOR 3RD PERSON CAMERA. REMOVE IF STATIONARY CAMERA.
-            Debug.Log("Direction: " + direction);
-            if(Vector3.Dot(transform.forward, direction) <= -0.45) {
+            if(tankControls && (Vector3.Dot(transform.forward, direction) <= -0.6)) {
                 direction.z *= -1;
                 direction.x *= -1;
             }
