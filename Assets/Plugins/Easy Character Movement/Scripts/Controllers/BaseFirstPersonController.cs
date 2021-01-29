@@ -251,7 +251,7 @@ namespace ECM.Controllers
 
             // Cache and initialize this components
 
-            mouseLook = GetComponent<Components.MouseLook>();
+            mouseLook = Camera.main.GetComponent<Components.MouseLook>();
             if (mouseLook == null)
             {
                 Debug.LogError(
@@ -268,7 +268,7 @@ namespace ECM.Controllers
                     name));
             }
 
-            var cam = GetComponentInChildren<Camera>();
+            var cam = Camera.main;
             if (cam == null)
             {
                 Debug.LogError(
