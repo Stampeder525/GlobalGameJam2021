@@ -5,6 +5,8 @@ using UnityEngine;
 public class LoopStreets : MonoBehaviour
 {
     public List<GameObject> rows;
+    public float streetLoopDistance = 600f;
+    public float triggerLoopDistance = 360f;
     private List<GameObject> loopTriggers = new List<GameObject>();
     // private GameObject forwardTrigger;
     // private GameObject backwardTrigger;
@@ -28,7 +30,7 @@ public class LoopStreets : MonoBehaviour
         GameObject row = rows[index];
         rows.Remove(row);
         Vector3 rowPos = row.transform.position;
-        float newZ = isForward ? Mathf.Round(rowPos.z - 360f) : Mathf.Round(rowPos.z + 360f);
+        float newZ = isForward ? Mathf.Round(rowPos.z - streetLoopDistance) : Mathf.Round(rowPos.z + streetLoopDistance);
         Vector3 newPos = new Vector3(Mathf.Round(rowPos.x), 0, newZ);
         row.transform.position = newPos;
         if(isForward) {
@@ -44,7 +46,7 @@ public class LoopStreets : MonoBehaviour
 
         for(int i = 0; i < loopTriggers.Count; i++) {
             loopTriggers[i].GetComponent<Collider>().enabled = false;
-            float newZ = isForward ? Mathf.Round(loopTriggers[i].transform.position.z - 120f) : Mathf.Round(loopTriggers[i].transform.position.z + 120f);
+            float newZ = isForward ? Mathf.Round(loopTriggers[i].transform.position.z - triggerLoopDistance) : Mathf.Round(loopTriggers[i].transform.position.z + triggerLoopDistance);
             Vector3 newPos = new Vector3(Mathf.Round(loopTriggers[i].transform.position.x), 0, newZ);
             loopTriggers[i].transform.position = newPos;
             loopTriggers[i].GetComponent<Collider>().enabled = true;
