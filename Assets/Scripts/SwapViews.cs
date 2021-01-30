@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ECM.Examples;
+using PixelCrushers.DialogueSystem;
+
 
 public class SwapViews : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class SwapViews : MonoBehaviour
         thirdPersonController = gameObject.GetComponent<CustomCharacterController>();
         firstPersonControllerObj = transform.Find("FirstPersonController").gameObject;
         SwapView(firstPersonState);
+        DialogueLua.SetVariable("PlayerOutOfBody", firstPersonState!=0);
     }
 
     // Update is called once per frame
@@ -59,6 +62,7 @@ public class SwapViews : MonoBehaviour
         firstPersonState = 0;
         fadeFogRoutine = FadeFog(0.03f);
         StartCoroutine(fadeFogRoutine);
+        DialogueLua.SetVariable("PlayerOutOfBody", false);
 
         //Toggle Out of Body objects
         if (OOB_Manager.instance != null)
@@ -74,6 +78,7 @@ public class SwapViews : MonoBehaviour
         firstPersonState = 1;
         fadeFogRoutine = FadeFog(0.05f);
         StartCoroutine(fadeFogRoutine);
+        DialogueLua.SetVariable("PlayerOutOfBody", true);
 
         //Toggle Out of Body objects
         if (OOB_Manager.instance != null)
