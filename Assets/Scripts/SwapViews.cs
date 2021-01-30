@@ -31,7 +31,10 @@ public class SwapViews : MonoBehaviour
         if(view == -1) {
             view = (firstPersonState == 1) ? 0 : 1;
         }
-        StopCoroutine(fadeFogRoutine);
+
+        if(fadeFogRoutine != null)
+            StopCoroutine(fadeFogRoutine);
+
         switch(view) {
             case 0:
                 ShowThirdPersonView();
@@ -83,5 +86,6 @@ public class SwapViews : MonoBehaviour
             RenderSettings.fogDensity = Mathf.SmoothStep(RenderSettings.fogDensity, targetDensity, 8f * Time.deltaTime);
             yield return null;
         }
+        fadeFogRoutine = null;
     }
 }
