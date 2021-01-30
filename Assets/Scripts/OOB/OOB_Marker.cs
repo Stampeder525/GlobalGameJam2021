@@ -18,6 +18,14 @@ public class OOB_Marker : OOB_Object
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        if (OOB_Manager.instance != null)
+            OOB_Manager.instance.AddOOBObject(this);
+
+        ToggleObjectShown(false);
+    }
+
     public void TriggerMarker()
     {
         if(SoundManager.instance != null && audioClip != null)

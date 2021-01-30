@@ -7,7 +7,7 @@ public class OOB_Manager : MonoBehaviour
     //Instance
     public static OOB_Manager instance;
 
-    private OOB_Object[] oobObjsList;
+    private List<OOB_Object> oobObjsList;
 
     private void Awake()
     {
@@ -21,10 +21,12 @@ public class OOB_Manager : MonoBehaviour
     void Start()
     {
         //Get all objects in list
-        oobObjsList = new OOB_Object[0];
-        oobObjsList = GetComponentsInChildren<OOB_Object>();
+        oobObjsList = new List<OOB_Object>();
+    }
 
-        ToggleOOBObjects(false);
+    public void AddOOBObject(OOB_Object oobObject)
+    {
+        oobObjsList.Add(oobObject);
     }
 
     public void ToggleOOBObjects(bool toggle)
@@ -32,7 +34,7 @@ public class OOB_Manager : MonoBehaviour
         if (oobObjsList == null)
             return;
 
-        for(int i = 0; i < oobObjsList.Length; i++)
+        for(int i = 0; i < oobObjsList.Count; i++)
         {
             OOB_Object oobObject = oobObjsList[i];
 
