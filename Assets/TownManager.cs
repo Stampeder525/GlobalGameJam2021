@@ -12,6 +12,7 @@ public class TownManager : MonoBehaviour
     public GameObject clueGiverLawn2;
     public GameObject clueGiverLawn3;
     public GameObject clueGiverLawn4;
+    public GameObject clueGiverLawn5;
 
     private GameObject[] leftLawnTransformList;
     private GameObject[] rightLawnTransformList;
