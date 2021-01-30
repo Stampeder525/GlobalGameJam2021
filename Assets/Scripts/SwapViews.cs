@@ -70,7 +70,7 @@ public class SwapViews : MonoBehaviour
         thirdPersonController.enabled = false;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         firstPersonControllerObj.SetActive(true);
-        //firstPersonControllerObj.GetComponent<ECM.Controllers.BaseFirstPersonController>().cameraPivotTransform.rotation = ;
+        firstPersonControllerObj.GetComponent<ECM.Controllers.BaseFirstPersonController>().cameraPivotTransform.localRotation = Quaternion.identity;
         firstPersonState = 1;
         fadeFogRoutine = FadeFog(0.05f);
         StartCoroutine(fadeFogRoutine);
