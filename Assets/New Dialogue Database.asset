@@ -161,34 +161,6 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
-  - id: 2
-    fields:
-    - title: Name
-      value: Neighbor1Complete
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: Player has talked to the first neighbor
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 3
-    fields:
-    - title: Name
-      value: Neighbor2Complete
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: Player has followed directions to the second neighbor
-      type: 0
-      typeString: CustomFieldType_Text
   - id: 4
     fields:
     - title: Name
@@ -201,20 +173,6 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Description
       value: Player has found the street address of the third neighbor
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 5
-    fields:
-    - title: Name
-      value: Neighbor3Complete
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: Player used out-of-body to overhear the next address.
       type: 0
       typeString: CustomFieldType_Text
   - id: 6
@@ -243,6 +201,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Description
       value: Player is out of their body
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 8
+    fields:
+    - title: Name
+      value: NeighborsComplete
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: Number of Neighbor tasks completed
       type: 0
       typeString: CustomFieldType_Text
   conversations:
@@ -705,7 +677,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Neighbor1Complete"] = true;
+      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] +
+        1;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -902,7 +875,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Neighbor1Complete"] == true
+      conditionsString: Variable["NeighborsComplete"] >= 1;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1253,7 +1226,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["Neighbor1Complete"] == false
+      conditionsString: Variable["NeighborsComplete"] < 1;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1319,7 +1292,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Neighbor2Complete"] = true
+      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] +
+        1;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1522,8 +1496,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Neighbor3CloseBy"] and Variable["Neighbor2Complete"]
-        and  Variable["PlayerOutOfBody"] == false
+      conditionsString: Variable["Neighbor3CloseBy"] and Variable["NeighborsComplete"]
+        >= 2 and  Variable["PlayerOutOfBody"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1801,7 +1775,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: Variable["PlayerOutOfBody"] and Variable["Neighbor2Complete"]
+      conditionsString: Variable["PlayerOutOfBody"] and Variable["Neighbor3Found"]
         and Variable["Neighbor3CloseBy"] == false
       userScript: 
       onExecute:
@@ -2011,7 +1985,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Neighbor3Complete"] = true
+      userScript: Variable["NeighborsComplete"] += 1;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2075,7 +2049,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["Neighbor2Complete"] == false
+      conditionsString: Variable["NeighborsComplete"] < 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2086,8 +2060,8 @@ MonoBehaviour:
         y: 122
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 31.714756}
+    canvasZoom: 1.03
   syncInfo:
     syncActors: 0
     syncItems: 0
