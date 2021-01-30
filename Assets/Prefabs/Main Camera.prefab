@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1525415436425718155}
   - component: {fileID: 8422690615875580485}
   - component: {fileID: 937275003863118797}
+  - component: {fileID: 351440541}
+  - component: {fileID: 351440548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -29,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525415436425718150}
-  m_LocalRotation: {x: 0.09676559, y: 0, z: 0, w: 0.9953072}
+  m_LocalRotation: {x: 0.09676646, y: 0, z: 0, w: 0.99530715}
   m_LocalPosition: {x: 241.2, y: 9.4, z: 128.20999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.106001, y: 0, z: 0}
 --- !u!20 &1525415436425718148
 Camera:
   m_ObjectHideFlags: 0
@@ -55,9 +57,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.125
+    x: 0
     y: 0
-    width: 0.75
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -133,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -147,8 +149,8 @@ MonoBehaviour:
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
+  m_Dithering: 1
+  m_ClearDepth: 0
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -165,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 16
-  m_RefResolutionX: 320
+  m_RefResolutionX: 426
   m_RefResolutionY: 240
   m_UpscaleRT: 0
   m_PixelSnapping: 1
@@ -173,6 +175,36 @@ MonoBehaviour:
   m_CropFrameY: 0
   m_StretchFill: 1
 --- !u!114 &937275003863118797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525415436425718150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4a7b6dca62ece4cb78b603cb08948c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lockCursor: 1
+  _unlockCursorKey: 27
+  _lateralSensitivity: 2
+  _verticalSensitivity: 2
+  _smooth: 0
+  _smoothTime: 5
+  _clampPitch: 1
+  _minPitchAngle: -90
+  _maxPitchAngle: 90
+--- !u!45 &351440541
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525415436425718150}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+--- !u!114 &351440548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
