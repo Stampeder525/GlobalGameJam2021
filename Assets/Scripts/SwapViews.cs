@@ -61,6 +61,7 @@ public class SwapViews : MonoBehaviour
         thirdPersonController.enabled = true;
         firstPersonState = 0;
         fadeFogRoutine = FadeFog(0.03f);
+        DialogueLua.SetVariable("PlayerOutOfBody", false);
         StartCoroutine(fadeFogRoutine);
 
         //Toggle Out of Body objects
@@ -76,6 +77,7 @@ public class SwapViews : MonoBehaviour
         firstPersonControllerObj.GetComponent<ECM.Controllers.BaseFirstPersonController>().cameraPivotTransform.localRotation = Quaternion.identity;
         firstPersonState = 1;
         fadeFogRoutine = FadeFog(0.05f);
+        DialogueLua.SetVariable("PlayerOutOfBody", true);
         StartCoroutine(fadeFogRoutine);
 
         //Toggle Out of Body objects
