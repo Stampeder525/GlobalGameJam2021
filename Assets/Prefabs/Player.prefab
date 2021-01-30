@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147586639946697090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2.48}
+  m_LocalPosition: {x: 0, y: 0.485, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5147586641390786982}
@@ -47,9 +47,10 @@ GameObject:
   - component: {fileID: 169276014}
   - component: {fileID: 625573836}
   - component: {fileID: 625573837}
+  - component: {fileID: 9105749501490923126}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147586641390787000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29d7a565f3423374e83fad0694b491ec, type: 3}
   m_Name: 
@@ -153,9 +154,9 @@ MonoBehaviour:
   _maxMidAirJumps: 0
   _useRootMotion: 1
   _rootMotionRotation: 1
-  playerCamera: {fileID: 5147586639946697101}
+  playerCamera: {fileID: 0}
   _walkSpeed: 5
-  _runSpeed: 5
+  _runSpeed: 15
 --- !u!114 &5147586641390786977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147586641390787000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 413f23fc1b9daea408b76cdac3bd18af, type: 3}
   m_Name: 
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147586641390787000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 624654ff0a68ee844994f728ddf3d991, type: 3}
   m_Name: 
@@ -214,7 +215,7 @@ MonoBehaviour:
   raycastAll: 0
   useDefaultGUI: 1
   guiSkin: {fileID: 0}
-  guiStyleName: label
+  guiStyleName: 
   alignment: 1
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
@@ -225,8 +226,8 @@ MonoBehaviour:
     outOfRange: {fileID: 0}
     width: 64
     height: 64
-  useKey: 323
-  useButton: Fire2
+  useKey: 101
+  useButton: E
   defaultUseMessage: (Interact)
   broadcastToChildren: 1
   actorTransform: {fileID: 0}
@@ -362,6 +363,54 @@ MonoBehaviour:
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &9105749501490923126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147586641390787000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDefaultGUI: 1
+  guiSkin: {fileID: 0}
+  guiStyleName: label
+  alignment: 1
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  textStyle: 1
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  defaultUseMessage: (spacebar to interact)
+  useKey: 101
+  useButton: E
+  enableTouch: 0
+  touchArea:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 0
+      value: 0
+    height:
+      scale: 0
+      value: 0
+    minPixelWidth: 0
+    minPixelHeight: 0
+  broadcastToChildren: 1
+  actorTransform: {fileID: 0}
+  onSelectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1247511309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +449,27 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 0}
+--- !u!114 &1774423055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190907409109575615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4a7b6dca62ece4cb78b603cb08948c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lockCursor: 1
+  _unlockCursorKey: 27
+  _lateralSensitivity: 2
+  _verticalSensitivity: 2
+  _smooth: 0
+  _smoothTime: 5
+  _clampPitch: 0
+  _minPitchAngle: -90
+  _maxPitchAngle: 90
 --- !u!1001 &5147586639919550107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonCam
       objectReference: {fileID: 0}
+    - target: {fileID: 1444472538808622741, guid: 867b8d2eced67404186c5652491aa961,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4700562562581186845, guid: 867b8d2eced67404186c5652491aa961,
         type: 3}
       propertyPath: m_Priority
@@ -623,6 +698,12 @@ PrefabInstance:
 --- !u!4 &5143112096889176113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4477165101240748, guid: 867b8d2eced67404186c5652491aa961,
+    type: 3}
+  m_PrefabInstance: {fileID: 5147586640883863965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9190907409109575615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4099207295401375266, guid: 867b8d2eced67404186c5652491aa961,
     type: 3}
   m_PrefabInstance: {fileID: 5147586640883863965}
   m_PrefabAsset: {fileID: 0}
