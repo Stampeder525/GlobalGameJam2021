@@ -217,6 +217,20 @@ MonoBehaviour:
       value: Number of Neighbor tasks completed
       type: 0
       typeString: CustomFieldType_Text
+  - id: 9
+    fields:
+    - title: Name
+      value: NumAvailableFollowers
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: Number of people following the player
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -612,8 +626,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] +
-        1;
+      userScript: 'Variable["NeighborsComplete"] = Variable["NeighborsComplete"]
+        + 1;
+
+        Variable["NumAvailableFollowers"] = Variable["NumAvailableFollowers"]
+        + 1;'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1578,8 +1595,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] +
-        1;
+      userScript: 'Variable["NeighborsComplete"] = Variable["NeighborsComplete"]
+        + 1;
+
+        Variable["NumAvailableFollowers"] = Variable["NumAvailableFollowers"]
+        + 1;'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2278,8 +2298,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] + 
-        1;
+      userScript: 'Variable["NeighborsComplete"] = Variable["NeighborsComplete"]
+        +  1;
+
+        Variable["NumAvailableFollowers"] = Variable["NumAvailableFollowers"]
+        + 2;'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
