@@ -31,7 +31,9 @@ public class SwapViews : MonoBehaviour
         if(view == -1) {
             view = (firstPersonState == 1) ? 0 : 1;
         }
-        StopCoroutine(fadeFogRoutine);
+        if(fadeFogRoutine != null) {
+            StopCoroutine(fadeFogRoutine);
+        }
         switch(view) {
             case 0:
                 ShowThirdPersonView();
