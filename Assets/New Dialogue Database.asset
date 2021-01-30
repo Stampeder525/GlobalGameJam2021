@@ -2000,8 +2000,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'I think I dropped the [em1]gate key[/em1] to my back yard while I
-          was back there, and silly old me locked myself out? '
+        value: I think I dropped the [em1]gate key[/em1] to my back yard while I
+          was back there, and silly old me locked myself out!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical

@@ -16,6 +16,7 @@ public class Puzzle2Gate : MonoBehaviour
     void Update()
     {
         bool firstPersonMode = DialogueLua.GetVariable("PlayerOutOfBody").AsBool;
+        Debug.Log("FIRST PERSON MODE: " + firstPersonMode);
         if(firstPersonMode) {
             gameObject.GetComponent<Collider>().enabled = false;
         }
