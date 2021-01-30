@@ -76,9 +76,12 @@ public class SwapViews : MonoBehaviour
             OOB_Manager.instance.ToggleOOBObjects(true);
     }
 
-    IEnumerator FadeFog(float targetDensity) {
-    while(Mathf.Abs(RenderSettings.fogDensity - targetDensity) > 0.001) {
-        RenderSettings.fogDensity = Mathf.SmoothStep(RenderSettings.fogDensity, targetDensity, 8f * Time.deltaTime);
-        yield return null;
+    IEnumerator FadeFog(float targetDensity)
+    {
+        while (Mathf.Abs(RenderSettings.fogDensity - targetDensity) > 0.001)
+        {
+            RenderSettings.fogDensity = Mathf.SmoothStep(RenderSettings.fogDensity, targetDensity, 8f * Time.deltaTime);
+            yield return null;
+        }
     }
 }
