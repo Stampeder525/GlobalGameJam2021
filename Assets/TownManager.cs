@@ -9,7 +9,7 @@ public class TownManager : MonoBehaviour
     public GameObject defaultLawnObj;
 
     public GameObject clueGiverLawn1;
-    public GameObject clueGiverLawn2;
+    public GameObject cluegiverlawn5;
     public GameObject clueGiverLawn3;
     public GameObject clueGiverLawn4;
     public GameObject clueGiverLawn5;
@@ -44,16 +44,25 @@ public class TownManager : MonoBehaviour
         }
     }
 
+    //Hard coded script
     private void SpawnSpecialLawns()
     {
-        Transform lawnTransform = rightLawnTransformList[10].transform;
-
-        //Delete home there
-        Destroy(lawnTransform.GetChild(0).gameObject);
-
-        //Add prefab
+        //Clue 1
+        Transform clueLawnTransform1 = rightLawnTransformList[14].transform;
+        Destroy(clueLawnTransform1.GetChild(0).gameObject);
         if(clueGiverLawn1 != null)
-            Instantiate(clueGiverLawn1, lawnTransform);
+            Instantiate(clueGiverLawn1, clueLawnTransform1);
 
+        //Clue 2
+        Transform clueLawnTransform2 = rightLawnTransformList[9].transform;
+        Destroy(clueLawnTransform2.GetChild(0).gameObject);
+        if (cluegiverlawn5 != null)
+            Instantiate(cluegiverlawn5, clueLawnTransform2);
+
+        //Clue 2
+        Transform clueLawnTransform5 = leftLawnTransformList[10].transform;
+        Destroy(clueLawnTransform5.GetChild(0).gameObject);
+        if (cluegiverlawn5 != null)
+            Instantiate(cluegiverlawn5, clueLawnTransform5);
     }
 }
