@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
-
 public class Neighbor3DistanceCheck : MonoBehaviour
 {
 
