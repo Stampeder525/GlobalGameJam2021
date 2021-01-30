@@ -8,7 +8,6 @@ public class SwapViews : MonoBehaviour
     public int firstPersonState;
 
     private GameObject firstPersonController;
-    private ECM.Components.MouseLook mouseLook;
     private CustomCharacterController thirdPersonController;
 
     // Start is called before the first frame update
@@ -31,35 +30,45 @@ public class SwapViews : MonoBehaviour
         if(view == -1) {
             view = (firstPersonState == 1) ? 0 : 1;
         }
-        Debug.Log("VIEW:" + view);
         switch(view) {
-            case 0: {
-                firstPersonController.SetActive(false);
-                firstPersonController.transform.position = gameObject.transform.position;
-                firstPersonController.transform.rotation = gameObject.transform.rotation;
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-                thirdPersonController.enabled = true;
-                firstPersonState = 0;
-                RenderSettings.fogDensity = 0.03f;
+            case 0:
+                ShowThirdPersonView();
                 break;
-            }
-            case 1: {
-                thirdPersonController.enabled = false;
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                firstPersonController.SetActive(true);
-                firstPersonState = 1;
-                RenderSettings.fogDensity = 0.05f;
+            case 1:
+                ShowFirstPersonView();
                 break;
-            }
-            default: {
-                firstPersonController.SetActive(false);
-                firstPersonController.transform.position = gameObject.transform.position;
-                firstPersonController.transform.rotation = gameObject.transform.rotation;
-                thirdPersonController.enabled = true;
-                firstPersonState = 1;
-                RenderSettings.fogDensity = 0.03f;
-                break;
-            }
+            default: 
+                ShowThirdPersonView();
+            break;
+            
         }
+    }
+
+    public void ShowThirdPersonView()
+    {
+        firstPersonController.SetActive(false);
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        firstPersonController.transform.position = gameObject.transform.position;
+        firstPersonController.transform.rotation = gameObject.transform.rotation;
+        thirdPersonController.enabled = true;
+        firstPersonState = 0;
+        RenderSettings.fogDensity = 0.03f;
+
+        //Toggle Out of Body objects
+        if (OOB_Manager.instance != null)
+            OOB_Manager.instance.ToggleOOBObjects(false);
+    }
+
+    public void ShowFirstPersonView()
+    {
+        thirdPersonController.enabled = false;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        firstPersonController.SetActive(true);
+        firstPersonState = 1;
+        RenderSettings.fogDensity = 0.05f;
+
+        //Toggle Out of Body objects
+        if (OOB_Manager.instance != null)
+            OOB_Manager.instance.ToggleOOBObjects(true);
     }
 }
