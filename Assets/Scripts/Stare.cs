@@ -12,6 +12,7 @@ public class Stare : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        target = GameObject.Find("Player").transform;
     }
 
     void OnAnimatorIK(int layerIndex)

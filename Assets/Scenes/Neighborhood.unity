@@ -12995,7 +12995,8 @@ MonoBehaviour:
     type: 3}
   clueGiverLawn1: {fileID: 1914731448866876283, guid: 478e29adb23b28d4199d5b1d2d1cb6d0,
     type: 3}
-  clueGiverLawn2: {fileID: 0}
+  clueGiverLawn2: {fileID: 1914731448866876283, guid: e92fee17834e095418014a9dbbb92afd,
+    type: 3}
   clueGiverLawn3: {fileID: 0}
   clueGiverLawn4: {fileID: 0}
   clueGiverLawn5: {fileID: 0}
