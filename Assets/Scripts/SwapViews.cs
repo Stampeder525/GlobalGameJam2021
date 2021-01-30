@@ -7,7 +7,7 @@ public class SwapViews : MonoBehaviour
 {
     public int firstPersonState;
 
-    private GameObject firstPersonController;
+    private GameObject firstPersonControllerObj;
     private CustomCharacterController thirdPersonController;
     private IEnumerator fadeFogRoutine;
 
@@ -15,7 +15,7 @@ public class SwapViews : MonoBehaviour
     void Start()
     {
         thirdPersonController = gameObject.GetComponent<CustomCharacterController>();
-        firstPersonController = transform.Find("FirstPersonController").gameObject;
+        firstPersonControllerObj = transform.Find("FirstPersonController").gameObject;
         SwapView(firstPersonState);
     }
 
@@ -51,10 +51,10 @@ public class SwapViews : MonoBehaviour
 
     public void ShowThirdPersonView()
     {
-        firstPersonController.SetActive(false);
+        firstPersonControllerObj.SetActive(false);
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        firstPersonController.transform.position = gameObject.transform.position;
-        firstPersonController.transform.rotation = gameObject.transform.rotation;
+        firstPersonControllerObj.transform.position = gameObject.transform.position;
+        firstPersonControllerObj.transform.rotation = gameObject.transform.rotation;
         thirdPersonController.enabled = true;
         firstPersonState = 0;
         fadeFogRoutine = FadeFog(0.03f);
@@ -69,7 +69,8 @@ public class SwapViews : MonoBehaviour
     {
         thirdPersonController.enabled = false;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        firstPersonController.SetActive(true);
+        firstPersonControllerObj.SetActive(true);
+        //firstPersonControllerObj.GetComponent<ECM.Controllers.BaseFirstPersonController>().cameraPivotTransform.rotation = ;
         firstPersonState = 1;
         fadeFogRoutine = FadeFog(0.05f);
         StartCoroutine(fadeFogRoutine);

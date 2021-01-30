@@ -210,6 +210,7 @@ namespace ECM.Components
 
                 if (clampPitch)
                     cameraTransform.localRotation = ClampPitch(cameraTransform.localRotation);
+                Debug.Log(cameraTransform.localRotation.eulerAngles);
             }
 
             UpdateCursorLock();

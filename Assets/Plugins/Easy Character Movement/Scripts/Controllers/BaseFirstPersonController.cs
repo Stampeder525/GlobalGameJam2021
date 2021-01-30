@@ -277,8 +277,9 @@ namespace ECM.Controllers
             }
             else
             {
-                cameraTransform = cam.transform;
-                mouseLook.Init(transform, cameraTransform);
+                //Hard-coded to camera pivot transform
+                cameraTransform = cameraPivotTransform;
+                mouseLook.Init(transform, cameraPivotTransform);
             }
         }
 
