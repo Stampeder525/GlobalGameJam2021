@@ -47,8 +47,8 @@ public class LoopStreets : MonoBehaviour
             float newZ = isForward ? Mathf.Round(loopTriggers[i].transform.position.z - 120f) : Mathf.Round(loopTriggers[i].transform.position.z + 120f);
             Vector3 newPos = new Vector3(Mathf.Round(loopTriggers[i].transform.position.x), 0, newZ);
             loopTriggers[i].transform.position = newPos;
-            trigger.GetComponent<Collider>().enabled = true;
-            StartCoroutine(ReenableTrigger(loopTriggers[i]));
+            loopTriggers[i].GetComponent<Collider>().enabled = true;
+            // StartCoroutine(ReenableTrigger(loopTriggers[i]));
         }
         
     }
