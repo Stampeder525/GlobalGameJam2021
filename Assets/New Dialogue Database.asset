@@ -210,7 +210,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: 0
+      value: 2
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
@@ -1985,7 +1985,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["NeighborsComplete"] += 1;
+      userScript: Variable["NeighborsComplete"] = Variable["NeighborsComplete"] + 
+        1;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
