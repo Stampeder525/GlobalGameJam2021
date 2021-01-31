@@ -65,6 +65,12 @@ public class TownManager : MonoBehaviour
         if (clueGiverLawn3 != null)
             Instantiate(clueGiverLawn3, clueLawnTransform3);
 
+        //Clue 4
+        Transform clueLawnTransform4 = leftLawnTransformList[5].transform;
+        Destroy(clueLawnTransform4.GetChild(0).gameObject);
+        if (clueGiverLawn4 != null)
+            Instantiate(clueGiverLawn4, clueLawnTransform4);
+
         //Clue 2
         Transform clueLawnTransform5 = leftLawnTransformList[7].transform;
         Destroy(clueLawnTransform5.GetChild(0).gameObject);
