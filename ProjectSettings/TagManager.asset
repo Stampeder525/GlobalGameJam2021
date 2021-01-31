@@ -8,6 +8,7 @@ TagManager:
   - Item
   - LeftLawnTransform
   - RightLawnTransform
+  - HouseModel
   layers:
   - Default
   - TransparentFX

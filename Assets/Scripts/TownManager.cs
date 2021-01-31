@@ -6,7 +6,7 @@ public class TownManager : MonoBehaviour
 {
     public int puzzleHomeIndex = 0;
 
-    public GameObject defaultLawnObj;
+    public List<GameObject> defaultLawnObjs;
 
     public GameObject clueGiverLawn1;
     public GameObject clueGiverLawn2;
@@ -28,19 +28,19 @@ public class TownManager : MonoBehaviour
 
     private void SpawnDefaultHomes()
     {
-        if (defaultLawnObj == null)
+        if (defaultLawnObjs.Count == 0)
             return;
 
         for(int i = 0; i < leftLawnTransformList.Length; i++)
         {
             Transform lawnTransform = leftLawnTransformList[i].transform;
-            Instantiate(defaultLawnObj, lawnTransform);
+            Instantiate(defaultLawnObjs[Random.Range(0, defaultLawnObjs.Count)], lawnTransform);
         }
 
         for (int i = 0; i < rightLawnTransformList.Length; i++)
         {
             Transform lawnTransform = rightLawnTransformList[i].transform;
-            Instantiate(defaultLawnObj, lawnTransform);
+            Instantiate(defaultLawnObjs[Random.Range(0, defaultLawnObjs.Count)], lawnTransform);
         }
     }
 

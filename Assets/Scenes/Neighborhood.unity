@@ -3388,8 +3388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleHomeIndex: 0
-  defaultLawnObj: {fileID: 4018176430043019882, guid: 56e099963a1b185418abce24668adbf4,
-    type: 3}
+  defaultLawnObjs:
+  - {fileID: 4018176430043019882, guid: 56e099963a1b185418abce24668adbf4, type: 3}
+  - {fileID: 4018176430043019882, guid: fe0c908479c53734f96b6585222db51b, type: 3}
   clueGiverLawn1: {fileID: 1914731448866876283, guid: 478e29adb23b28d4199d5b1d2d1cb6d0,
     type: 3}
   clueGiverLawn2: {fileID: 1914731448866876283, guid: e92fee17834e095418014a9dbbb92afd,
