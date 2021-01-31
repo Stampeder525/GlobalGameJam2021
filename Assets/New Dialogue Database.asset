@@ -1336,7 +1336,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Weren't you looking for your home?
+        value: Weren't you looking for your home or something?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1371,7 +1371,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 232.12125
+        x: 233.13135
         y: 216.36365
         width: 160
         height: 30
