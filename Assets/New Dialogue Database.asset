@@ -3246,7 +3246,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: She'll never know how close she got. [em1]Leonard lives less than
-          eight houses away![/em1]
+          four houses away![/em1]
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical

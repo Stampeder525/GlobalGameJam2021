@@ -56,7 +56,7 @@ public class TownManager : MonoBehaviour
             Instantiate(clueGiverLawn1, clueLawnTransform1);
 
         //Clue 2
-        Transform clueLawnTransform2 = rightLawnTransformList[9].transform;
+        Transform clueLawnTransform2 = rightLawnTransformList[2].transform;
         Destroy(clueLawnTransform2.GetChild(0).gameObject);
         if (clueGiverLawn2 != null)
             Instantiate(clueGiverLawn2, clueLawnTransform2);
@@ -68,19 +68,19 @@ public class TownManager : MonoBehaviour
             Instantiate(clueGiverLawn3, clueLawnTransform3);
 
         //Clue 4
-        Transform clueLawnTransform4 = leftLawnTransformList[5].transform;
+        Transform clueLawnTransform4 = leftLawnTransformList[6].transform;
         Destroy(clueLawnTransform4.GetChild(0).gameObject);
         if (clueGiverLawn4 != null)
             Instantiate(clueGiverLawn4, clueLawnTransform4);
 
         //Clue 5
-        Transform clueLawnTransform5 = leftLawnTransformList[7].transform;
+        Transform clueLawnTransform5 = rightLawnTransformList[13].transform;
         Destroy(clueLawnTransform5.GetChild(0).gameObject);
         if (clueGiverLawn5 != null)
             Instantiate(clueGiverLawn5, clueLawnTransform5);
 
         //Clue 2
-        Transform endingLawnTransform = leftLawnTransformList[12].transform;
+        Transform endingLawnTransform = leftLawnTransformList[1].transform;
         Destroy(endingLawnTransform.GetChild(0).gameObject);
         if (endingLawnTransform != null)
             Instantiate(endingLawn, endingLawnTransform);
