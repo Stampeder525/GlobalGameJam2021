@@ -3126,19 +3126,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 0
         destinationConversationID: 4
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 0
-        destinationConversationID: 4
         destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 0
-        destinationConversationID: 4
-        destinationDialogueID: 12
         isConnector: 0
         priority: 2
       - originConversationID: 4
@@ -3297,8 +3285,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 744.7049
-        y: 423.9419
+        x: 742.3519
+        y: 429.82425
         width: 160
         height: 30
     - id: 3
@@ -3368,8 +3356,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 750.44586
-        y: 474.78937
+        x: 748.0929
+        y: 480.67172
         width: 160
         height: 30
     - id: 4
@@ -3581,8 +3569,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 750.44586
-        y: 526.5752
+        x: 748.0929
+        y: 532.4576
         width: 160
         height: 30
     - id: 7
@@ -3729,8 +3717,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 751.29333
-        y: 576.2991
+        x: 748.94037
+        y: 582.18146
         width: 160
         height: 30
     - id: 9
@@ -4014,8 +4002,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1028.0989
-        y: 446.16406
+        x: 1025.746
+        y: 440.28174
         width: 160
         height: 30
     - id: 13
@@ -4085,8 +4073,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 753.7127
-        y: 676.2991
+        x: 747.83026
+        y: 682.1814
         width: 160
         height: 30
     - id: 14
@@ -4152,8 +4140,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 753.7127
-        y: 727.91205
+        x: 746.6538
+        y: 739.6768
         width: 160
         height: 30
     - id: 15
@@ -4223,8 +4211,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 751.3997
-        y: 624.30334
+        x: 749.04675
+        y: 630.1857
         width: 160
         height: 30
     - id: 16
