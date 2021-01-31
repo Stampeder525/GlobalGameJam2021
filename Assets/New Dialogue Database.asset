@@ -482,7 +482,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: It's you! You've finally returned! Do you recognize old [em1]Samuel[/em1]?
+        value: It's you! You've finally returned! Do you recognize old [em1]Elaine[/em1]?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -515,7 +515,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Neighbor5Found"] == false
+      conditionsString: Variable["Neighbor5Found"] == false  and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1648,7 +1649,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
-        == false and Variable["Neighbor5Found"] == false;
+        == false and Variable["Neighbor5Found"] == false  and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2001,7 +2003,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["NeighborsComplete"] < 1;
+      conditionsString: Variable["NeighborsComplete"] < 1 and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2214,7 +2217,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
-        == true and Variable["Neighbor5Found"] == false;
+        == true and Variable["Neighbor5Found"] == false  and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5233,7 +5237,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["PinataBroken"] == false and Variable["NeighborsComplete"]
-        >= 3 and Variable["Neighbor5Found"] == false;
+        >= 3 and Variable["Neighbor5Found"] == false  and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5577,7 +5582,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["NeighborsComplete"] < 3;
+      conditionsString: Variable["NeighborsComplete"] < 3  and Variable["PlayerOutOfBody"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5649,7 +5655,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Neighbor4Found"] and Variable["PinataBroken"] and
-        Variable["Neighbor5Found"] == false
+        Variable["Neighbor5Found"] == false  and Variable["PlayerOutOfBody"] == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6078,7 +6084,7 @@ MonoBehaviour:
         y: 96
         width: 160
         height: 30
-    canvasScrollPosition: {x: 144, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 6
     fields:
