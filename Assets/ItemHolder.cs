@@ -13,7 +13,7 @@ public class ItemHolder : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && grabRoutine == null)
+        if(Input.GetKeyDown(KeyCode.E) && grabRoutine == null)
         {
             if(!holdingItem)
             {
@@ -73,6 +73,7 @@ public class ItemHolder : MonoBehaviour
         heldItem = item;
         holdingItem = true;
         grabRoutine = null;
+        item.GetComponent<PickupItem>().OnPickup();
     }
 
     public void DropItem(GameObject item)
