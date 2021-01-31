@@ -3253,7 +3253,8 @@ MonoBehaviour:
   clueGiverLawn3: {fileID: 1914731448866876283, guid: 280098cc43e428d4ca0f07f3f5cbe40f,
     type: 3}
   clueGiverLawn4: {fileID: 0}
-  clueGiverLawn5: {fileID: 0}
+  clueGiverLawn5: {fileID: 1914731448866876283, guid: 406374efed87d8b459a48708ed68f58b,
+    type: 3}
 --- !u!4 &1089069641
 Transform:
   m_ObjectHideFlags: 0

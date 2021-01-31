@@ -271,6 +271,8 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Neighbor5Found
+      type: 0
+      typeString: 
   - id: 10
     fields:
     - title: Name
@@ -4282,7 +4284,7 @@ MonoBehaviour:
         y: 376.20425
         width: 160
         height: 30
-    canvasScrollPosition: {x: 249.52805, y: 188.66084}
+    canvasScrollPosition: {x: 345.06375, y: 200.26799}
     canvasZoom: 1.1199999
   - id: 5
     fields:
