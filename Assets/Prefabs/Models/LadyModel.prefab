@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinRenderer: {fileID: 4729840874464467706}
   skinMaterials:
-  - {fileID: 2100000, guid: 137c2b81056a4ff498df3e2df1975827, type: 2}
+  - {fileID: 2100000, guid: 0ec3f09c37cf1d74b96e5862ebfba220, type: 2}
   - {fileID: 2100000, guid: 68d20ce8bafa53a41bf599de5e3c42ca, type: 2}
   - {fileID: 2100000, guid: d423ecbb127fef444b7aa4684549a11f, type: 2}
   clothMaterials:

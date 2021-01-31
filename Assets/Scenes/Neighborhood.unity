@@ -1471,12 +1471,12 @@ PrefabInstance:
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000020849269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000020270041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
@@ -15838,12 +15838,12 @@ PrefabInstance:
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000020849269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000020270041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
@@ -16572,6 +16572,16 @@ PrefabInstance:
       propertyPath: _groundFriction
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5147586641390787003, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: _useRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608052946085748697, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33d358942a9c38440b1d9bfb6995b706, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
 --- !u!1001 &7248322639606772054

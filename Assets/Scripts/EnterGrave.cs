@@ -25,7 +25,7 @@ public class EnterGrave : MonoBehaviour
     }
 
     IEnumerator EndGame() {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         Application.Quit();
     }
 }
