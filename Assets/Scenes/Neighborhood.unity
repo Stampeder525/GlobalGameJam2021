@@ -15648,6 +15648,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1196023579, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
+      propertyPath: sendToOtherItemHolder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5114615848163818829, guid: 5b97426755ae6954ab971e9e891ea716,
         type: 3}
       propertyPath: _groundMask.m_Bits
