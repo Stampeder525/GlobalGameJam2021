@@ -151,7 +151,7 @@ namespace ECM.Examples
 
             // Transform moveDirection vector to be relative to camera view direction
 
-            moveDirection = moveDirection.relativeTo(playerCamera);
+            moveDirection = moveDirection.relativeTo(gameObject.transform);
         }
 
         #endregion
