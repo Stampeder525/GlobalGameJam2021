@@ -37,7 +37,8 @@ public class ItemHolder : MonoBehaviour
 
                     //Grab min item as object
                     grabRoutine = PickupItem(closestObj);
-                    StartCoroutine(grabRoutine);
+                    if(grabRoutine != null)
+                        StartCoroutine(grabRoutine);
                 }
             }
             else
