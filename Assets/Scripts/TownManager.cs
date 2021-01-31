@@ -14,6 +14,8 @@ public class TownManager : MonoBehaviour
     public GameObject clueGiverLawn4;
     public GameObject clueGiverLawn5;
 
+    public GameObject endingLawn;
+
     private GameObject[] leftLawnTransformList;
     private GameObject[] rightLawnTransformList;
 
@@ -71,10 +73,16 @@ public class TownManager : MonoBehaviour
         if (clueGiverLawn4 != null)
             Instantiate(clueGiverLawn4, clueLawnTransform4);
 
-        //Clue 2
+        //Clue 5
         Transform clueLawnTransform5 = leftLawnTransformList[7].transform;
         Destroy(clueLawnTransform5.GetChild(0).gameObject);
         if (clueGiverLawn5 != null)
             Instantiate(clueGiverLawn5, clueLawnTransform5);
+
+        //Clue 2
+        Transform endingLawnTransform = leftLawnTransformList[12].transform;
+        Destroy(endingLawnTransform.GetChild(0).gameObject);
+        if (endingLawnTransform != null)
+            Instantiate(endingLawn, endingLawnTransform);
     }
 }
