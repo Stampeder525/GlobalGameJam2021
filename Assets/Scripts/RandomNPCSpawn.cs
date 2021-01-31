@@ -15,7 +15,6 @@ public class RandomNPCSpawn : MonoBehaviour
             }
         }
         else {
-            Random.seed = System.DateTime.Now.Millisecond;
             bool model = (Random.value > 0.5f);
             if(model){
                 transform.GetChild(0).gameObject.SetActive(false);
