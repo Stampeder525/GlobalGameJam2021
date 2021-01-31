@@ -232,7 +232,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: 3
+      value: 4
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
@@ -274,9 +274,9 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     - title: Description
       value: 
       type: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Neighbor5Found"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1648,7 +1648,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
-        == false;
+        == false and Variable["Neighbor5Found"] == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2214,7 +2214,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
-        == true
+        == true and and Variable["Neighbor5Found"] == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2851,15 +2851,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Neighbor3CloseBy"] and Variable["NeighborsComplete"]
-        >= 2 and  Variable["PlayerOutOfBody"] == false
+        >= 2 and  Variable["PlayerOutOfBody"] == false and Variable["Neighbor5Found"]
+        == false
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 193.5534
-        y: 122.02911
+        x: 201.7726
+        y: 117.919525
         width: 160
         height: 30
     - id: 2
@@ -3130,7 +3131,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["PlayerOutOfBody"] and Variable["Neighbor3Found"]
-        and Variable["Neighbor3CloseBy"] == false
+        and Variable["Neighbor3CloseBy"] == false and Variable["Neighbor5Found"]
+        == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3553,8 +3555,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1028.588
-        y: 124.00003
+        x: 1029.7645
+        y: 120.47064
         width: 160
         height: 30
     - id: 12
@@ -3689,8 +3691,8 @@ MonoBehaviour:
         y: 121.647064
         width: 160
         height: 30
-    canvasScrollPosition: {x: 273.12354, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.73000026
   - id: 4
     fields:
     - title: Title
@@ -3883,7 +3885,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 4 and  Variable["PlayerOutOfBody"]
-        == true
+        == true and Variable["Neighbor5Found"]==false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4318,7 +4320,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1023.1771
+        x: 1027.1771
         y: 689.2718
         width: 160
         height: 30
@@ -4389,8 +4391,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1025.5774
-        y: 753.6472
+        x: 1024.5774
+        y: 759.6472
         width: 160
         height: 30
     - id: 11
@@ -4461,7 +4463,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1027.0048
+        x: 1028.0048
         y: 384.70078
         width: 160
         height: 30
@@ -4665,8 +4667,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 508.08173
-        y: 376.20425
+        x: 509.08173
+        y: 394.20425
         width: 160
         height: 30
     - id: 17
@@ -4883,8 +4885,8 @@ MonoBehaviour:
         y: 700.0835
         width: 160
         height: 30
-    canvasScrollPosition: {x: 653.03925, y: 291.30292}
-    canvasZoom: 1.2399998
+    canvasScrollPosition: {x: 474.4157, y: 250.64055}
+    canvasZoom: 1
   - id: 5
     fields:
     - title: Title
@@ -5089,7 +5091,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["PinataBroken"] == false and Variable["NeighborsComplete"]
-        >= 3;
+        >= 3 and Variable["Neighbor5Found"] == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5504,7 +5506,8 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Neighbor4Found"] and Variable["PinataBroken"]
+      conditionsString: Variable["Neighbor4Found"] and Variable["PinataBroken"] and
+        Variable["Neighbor5Found"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5933,7 +5936,7 @@ MonoBehaviour:
         y: 96
         width: 160
         height: 30
-    canvasScrollPosition: {x: 246, y: 0}
+    canvasScrollPosition: {x: 144, y: 0}
     canvasZoom: 1
   syncInfo:
     syncActors: 0
