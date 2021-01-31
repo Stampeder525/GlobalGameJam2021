@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: f6479bf7045aa9143a59cc42b6aaa983
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: SirModel(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: geo_Head
+      parentName: SirModel(Clone)
+      position: {x: -0.0005779836, y: -0.016839169, z: 0.00027262597}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.5589931, y: 1.5589931, z: 1.5589931}
+    - name: geo_Body
+      parentName: SirModel(Clone)
+      position: {x: -0, y: 0.052370284, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.1156178, y: 2.3555558, z: 0.78451043}
+    - name: geo_UpperLeg
+      parentName: SirModel(Clone)
+      position: {x: -0.0052372925, y: 0.028783819, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.6755556, y: 1.7037036, z: 0.87407404}
+    - name: geo_LowerLeg
+      parentName: SirModel(Clone)
+      position: {x: -0.0052372925, y: 0.013582896, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.5250194, y: 1.4356232, z: 0.7365371}
+    - name: geo_HatRim
+      parentName: SirModel(Clone)
+      position: {x: -0, y: 0.07305888, z: -0.00020807977}
+      rotation: {x: -0.14875111, y: 0, z: -0, w: 0.9888747}
+      scale: {x: 1.2032533, y: 1.5622007, z: 1.5622007}
+    - name: geo_Feet
+      parentName: SirModel(Clone)
+      position: {x: -6.7593914e-10, y: 0.003659343, z: 0.0029751675}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: geo_UpperArms
+      parentName: SirModel(Clone)
+      position: {x: -0.010920083, y: 0.053790748, z: -0.0007556171}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.390147, y: 1.390147, z: 1.390147}
+    - name: geo_LowerArms
+      parentName: SirModel(Clone)
+      position: {x: -0.017375266, y: 0.04380544, z: -0.0015699272}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.4723153, y: 1.4723153, z: 1.4723153}
+    - name: geo_Hands
+      parentName: SirModel(Clone)
+      position: {x: -0.021714766, y: 0.035294898, z: -0.0014653361}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.4892241, y: 1.1180238, z: 1.4892241}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
