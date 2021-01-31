@@ -18437,6 +18437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169276014, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
+      propertyPath: _snapStrength
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 169276015, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
       propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -18448,6 +18452,11 @@ PrefabInstance:
     - target: {fileID: 169276015, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}
       propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147586641390786981, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: _groundMask.m_Bits
+      value: 32769
       objectReference: {fileID: 0}
     - target: {fileID: 5147586641390786982, guid: 5b97426755ae6954ab971e9e891ea716,
         type: 3}
@@ -18514,5 +18523,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 774592429}
+    - target: {fileID: 5147586641390787003, guid: 5b97426755ae6954ab971e9e891ea716,
+        type: 3}
+      propertyPath: _groundFriction
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97426755ae6954ab971e9e891ea716, type: 3}

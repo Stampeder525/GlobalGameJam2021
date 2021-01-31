@@ -1397,6 +1397,7 @@ namespace ECM.Components
 
             // Perform character's movement
 
+
             ApplyMovement(desiredVelocity, maxDesiredSpeed, onlyLateral);
 
             // If enabled, snap to ground

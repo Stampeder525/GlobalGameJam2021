@@ -106,9 +106,8 @@ namespace ECM.Examples
                 return;
 
             // Compute move vector in local space
-
             var move = transform.InverseTransformDirection(moveDirection);
-
+        
             // Update the animator parameters
 
             var forwardAmount = animator.applyRootMotion
