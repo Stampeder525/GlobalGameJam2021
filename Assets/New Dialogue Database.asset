@@ -273,6 +273,14 @@ MonoBehaviour:
       value: Neighbor5Found
       type: 0
       typeString: 
+    - title: Initial Value
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   - id: 10
     fields:
     - title: Name
@@ -4025,11 +4033,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4284,8 +4292,8 @@ MonoBehaviour:
         y: 376.20425
         width: 160
         height: 30
-    canvasScrollPosition: {x: 345.06375, y: 200.26799}
-    canvasZoom: 1.1199999
+    canvasScrollPosition: {x: 442.92712, y: 66.45242}
+    canvasZoom: 0.8500001
   - id: 5
     fields:
     - title: Title
