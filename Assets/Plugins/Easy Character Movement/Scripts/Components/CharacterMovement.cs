@@ -1440,7 +1440,12 @@ namespace ECM.Components
 
             // Perform character's movement
 
-            ApplyMovement(desiredVelocity, maxDesiredSpeed, acceleration, deceleration, friction, brakingFriction, onlyLateral);
+            //MANNY HARD CODE CHANGE: Acceleration only applies to turning with forward direction
+            float acc_with_forward = Input.GetAxisRaw("Vertical") <= 0 ? 0 : acceleration;
+            Debug.Log("Input Axis: " + Input.GetAxisRaw("Vertical"));
+            Debug.Log("Acc Forward: " + acc_with_forward);
+
+            ApplyMovement(desiredVelocity, maxDesiredSpeed, acc_with_forward, deceleration, friction, brakingFriction, onlyLateral);
 
             // If enabled, snap to ground
 
