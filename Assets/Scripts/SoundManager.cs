@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
     }
 
     public void StartMusic()
