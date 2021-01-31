@@ -9,6 +9,8 @@ TagManager:
   - LeftLawnTransform
   - RightLawnTransform
   - HouseModel
+  - EPrompt
+  - SpacePrompt
   layers:
   - Default
   - TransparentFX
