@@ -4349,12 +4349,12 @@ PrefabInstance:
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.00000004621232
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0000000044928465
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
@@ -4612,7 +4612,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1449336
+  m_Name: pb_Mesh-3127990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12594,8 +12594,7 @@ MonoBehaviour:
     type: 3}
   clueGiverLawn1: {fileID: 1914731448866876283, guid: 478e29adb23b28d4199d5b1d2d1cb6d0,
     type: 3}
-  cluegiverlawn5: {fileID: 1914731448866876283, guid: e92fee17834e095418014a9dbbb92afd,
-    type: 3}
+  clueGiverLawn2: {fileID: 0}
   clueGiverLawn3: {fileID: 0}
   clueGiverLawn4: {fileID: 0}
   clueGiverLawn5: {fileID: 0}
@@ -29258,12 +29257,12 @@ PrefabInstance:
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.00000004621232
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0000000044928465
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
