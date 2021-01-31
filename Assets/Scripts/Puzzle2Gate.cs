@@ -16,12 +16,11 @@ public class Puzzle2Gate : MonoBehaviour
     void Update()
     {
         bool firstPersonMode = DialogueLua.GetVariable("PlayerOutOfBody").AsBool;
-        Debug.Log("FIRST PERSON MODE: " + firstPersonMode);
         if(firstPersonMode) {
-            gameObject.GetComponent<Collider>().enabled = false;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
         else {
-            gameObject.GetComponent<Collider>().enabled = true;
+            gameObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }

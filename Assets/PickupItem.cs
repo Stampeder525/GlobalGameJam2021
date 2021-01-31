@@ -11,4 +11,8 @@ public class PickupItem : MonoBehaviour
     {
         DialogueLua.SetVariable(dialogueVariable, true);
     }
+
+    private void OnTriggerEnter(Collider other) {
+        OnPickup();
+    }
 }

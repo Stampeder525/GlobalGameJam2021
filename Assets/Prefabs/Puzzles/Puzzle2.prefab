@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7826021406074402601}
   - component: {fileID: 2133909158182684085}
   - component: {fileID: 8983971711142648239}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2868007627962178573}
   - component: {fileID: 602244012218598959}
   - component: {fileID: 5641852925664523560}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -2650,7 +2650,7 @@ GameObject:
   - component: {fileID: 7600271700216346741}
   - component: {fileID: 2125715389864056002}
   - component: {fileID: 6271116757087398707}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2694,7 +2694,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -3453,7 +3453,7 @@ GameObject:
   - component: {fileID: 5337032501950058169}
   - component: {fileID: 1296369394781068430}
   - component: {fileID: 6077110476849045682}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3497,7 +3497,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -6173,7 +6173,7 @@ GameObject:
   - component: {fileID: 4846563717863862618}
   - component: {fileID: 6473056285686684326}
   - component: {fileID: 4018451191166916370}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6217,7 +6217,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -6346,7 +6346,7 @@ GameObject:
   - component: {fileID: 5042839421828185699}
   - component: {fileID: 5022968177679976394}
   - component: {fileID: 5136665177844691951}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6390,7 +6390,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ae2a1eb8b4475f64b94d061840cfd3c4, type: 2}
@@ -7149,6 +7149,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1431190028283887832, guid: 138e78c0860f6ef4089cd24fff2dbafc,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431190028283887833, guid: 138e78c0860f6ef4089cd24fff2dbafc,
+        type: 3}
+      propertyPath: dialogueVariable
+      value: Neighbor2ItemFound
+      objectReference: {fileID: 0}
     - target: {fileID: 1431190028283887835, guid: 138e78c0860f6ef4089cd24fff2dbafc,
         type: 3}
       propertyPath: m_Name
@@ -7157,7 +7167,7 @@ PrefabInstance:
     - target: {fileID: 1431190028283887846, guid: 138e78c0860f6ef4089cd24fff2dbafc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.72482497
+      value: -18.94
       objectReference: {fileID: 0}
     - target: {fileID: 1431190028283887846, guid: 138e78c0860f6ef4089cd24fff2dbafc,
         type: 3}
@@ -7167,7 +7177,7 @@ PrefabInstance:
     - target: {fileID: 1431190028283887846, guid: 138e78c0860f6ef4089cd24fff2dbafc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.166475
+      value: -9.65
       objectReference: {fileID: 0}
     - target: {fileID: 1431190028283887846, guid: 138e78c0860f6ef4089cd24fff2dbafc,
         type: 3}

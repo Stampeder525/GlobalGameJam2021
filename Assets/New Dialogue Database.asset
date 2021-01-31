@@ -231,6 +231,20 @@ MonoBehaviour:
       value: Number of people following the player
       type: 0
       typeString: CustomFieldType_Text
+  - id: 10
+    fields:
+    - title: Name
+      value: Neighbor2ItemFound
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Found neighbor 2's item.
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -378,7 +392,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Do  my EYES deceive me?
+        value: It's you! You've finally returned!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1255,7 +1269,8 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: 'Variable["NeighborsComplete"] >= 1; '
+      conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
+        == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1820,7 +1835,8 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
+        == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1898,8 +1914,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 253.59085
-        y: 202.22726
+        x: 259.27264
+        y: 207.90909
         width: 160
         height: 30
     - id: 11
