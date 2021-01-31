@@ -5353,6 +5353,11 @@ PrefabInstance:
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6075393652861131137, guid: 928d6818ea82a7c44b2d0fb38550bb40,
+        type: 3}
+      propertyPath: conversation
+      value: Clue 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6075393652861131138, guid: 928d6818ea82a7c44b2d0fb38550bb40,
         type: 3}
       propertyPath: target
