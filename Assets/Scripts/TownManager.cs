@@ -48,7 +48,7 @@ public class TownManager : MonoBehaviour
     private void SpawnSpecialLawns()
     {
         //Clue 1
-        Transform clueLawnTransform1 = rightLawnTransformList[10].transform;
+        Transform clueLawnTransform1 = rightLawnTransformList[11].transform;
         Destroy(clueLawnTransform1.GetChild(0).gameObject);
         if(clueGiverLawn1 != null)
             Instantiate(clueGiverLawn1, clueLawnTransform1);
