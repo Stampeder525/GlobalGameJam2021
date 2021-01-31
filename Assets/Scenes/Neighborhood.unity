@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1157,12 +1157,12 @@ PrefabInstance:
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003928955
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000003819802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525415436425718149, guid: 83f8af933177d3c40b2c03560e585005,
         type: 3}
@@ -3388,8 +3388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleHomeIndex: 0
-  defaultLawnObj: {fileID: 4018176430043019882, guid: 56e099963a1b185418abce24668adbf4,
-    type: 3}
+  defaultLawnObjs:
+  - {fileID: 4018176430043019882, guid: 56e099963a1b185418abce24668adbf4, type: 3}
+  - {fileID: 4018176430043019882, guid: fe0c908479c53734f96b6585222db51b, type: 3}
   clueGiverLawn1: {fileID: 1914731448866876283, guid: 478e29adb23b28d4199d5b1d2d1cb6d0,
     type: 3}
   clueGiverLawn2: {fileID: 1914731448866876283, guid: e92fee17834e095418014a9dbbb92afd,
@@ -14002,12 +14003,12 @@ PrefabInstance:
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003928955
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000003819802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878691031810647446, guid: 68027c474e4dbf54e9a4db871034c9c4,
         type: 3}
