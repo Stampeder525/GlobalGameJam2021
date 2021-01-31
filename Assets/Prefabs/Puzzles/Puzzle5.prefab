@@ -9254,7 +9254,15 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6075393652861131137, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 6075393652861131143, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 6075393652861131138, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 531194918554572648, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 6075393652861131136, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 6075393652861131142, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 3611441326544195112, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
+    - {fileID: 6180903799147382822, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 928d6818ea82a7c44b2d0fb38550bb40, type: 3}
 --- !u!4 &1792141600774483145 stripped
 Transform:
@@ -9715,7 +9723,7 @@ PrefabInstance:
     - target: {fileID: 6075393652861131136, guid: 928d6818ea82a7c44b2d0fb38550bb40,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6075393652861131137, guid: 928d6818ea82a7c44b2d0fb38550bb40,
         type: 3}

@@ -10,9 +10,10 @@ public class RandomNPCSpawn : MonoBehaviour
         Random.seed = System.DateTime.Now.Millisecond;
         bool spawn = (Random.value > 0.6f);
         if(spawn) {
-            foreach(Transform child in transform) {
-                child.gameObject.SetActive(false);
-            }
+            GameObject child0 = transform.GetChild(0).gameObject;
+            GameObject child1 = transform.GetChild(1).gameObject;
+            child0.SetActive(false);
+            child1.SetActive(false);
         }
         else {
             bool model = (Random.value > 0.5f);
