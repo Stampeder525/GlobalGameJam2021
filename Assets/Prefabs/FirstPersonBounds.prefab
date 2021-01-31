@@ -4463,3 +4463,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   firstPersonPlayer: {fileID: 0}
+  radius: 15

@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ECM.Examples;
+using PixelCrushers.DialogueSystem;
+
 
 public class DisableMovement : MonoBehaviour
 {
+    private GameObject player;
+
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     public void StopMovement() {
-        gameObject.GetComponent<CustomCharacterController>().enabled = false;
-        gameObject.GetComponent<SwapViews>().enabled = false;
+        player.GetComponent<CustomCharacterController>().enabled = false;
+        player.GetComponent<SwapViews>().enabled = false;
+        player.GetComponent<ProximitySelector>().enabled = false;
     }
 
     public void StartMovement() {
-        gameObject.GetComponent<CustomCharacterController>().enabled = true;
-        gameObject.GetComponent<SwapViews>().enabled = true;
+        player.GetComponent<CustomCharacterController>().enabled = true;
+        player.GetComponent<SwapViews>().enabled = true;
+        player.GetComponent<ProximitySelector>().enabled = true;
     }
 }
