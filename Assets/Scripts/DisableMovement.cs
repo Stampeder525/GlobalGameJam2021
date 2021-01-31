@@ -18,11 +18,14 @@ public class DisableMovement : MonoBehaviour
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<SwapViews>().enabled = false;
         player.GetComponent<ProximitySelector>().enabled = false;
+        player.GetComponent<PickupItem>().enabled = false;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     public void StartMovement() {
         player.GetComponent<CustomCharacterController>().enabled = true;
         player.GetComponent<SwapViews>().enabled = true;
         player.GetComponent<ProximitySelector>().enabled = true;
+        player.GetComponent<PickupItem>().enabled = true;
     }
 }
