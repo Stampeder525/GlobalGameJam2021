@@ -26,7 +26,7 @@ public class Follower : MonoBehaviour
 
     IEnumerator Disappear() {
         disappearing = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         isActive = false;
         
         transform.parent.position = transform.root.position;

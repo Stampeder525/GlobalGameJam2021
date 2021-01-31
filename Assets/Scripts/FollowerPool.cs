@@ -52,11 +52,14 @@ public class FollowerPool : MonoBehaviour
     IEnumerator SpawnInterval() {
         while(true) {
             yield return new WaitForSeconds(Random.Range(spawnIntervalMin, spawnIntervalMax));
-            Debug.Log("SPAWNING BEHIND!");
-            for(int i = 0; i < numAvailableFollowers; i++) {
-                yield return new WaitForSeconds(0.11f);
-                SpawnFollower(i);
+            if(numAvailableFollowers > 0) {
+                Debug.Log("SPAWNING BEHIND!");
+                for(int i = 0; i < numAvailableFollowers; i++) {
+                    yield return new WaitForSeconds(0.11f);
+                    SpawnFollower(i);
+                }
             }
+            
         }
     }
 
