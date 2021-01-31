@@ -325,6 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6262847876952252650}
+  - component: {fileID: 7215873902786320568}
   m_Layer: 0
   m_Name: LadyModel
   m_TagString: Untagged
@@ -341,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 6746896208276240976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 330.86, y: 6.57, z: 247.04}
-  m_LocalScale: {x: 58.819, y: 58.819, z: 58.819}
+  m_LocalScale: {x: 24.136223, y: 24.136223, z: 24.136223}
   m_Children:
   - {fileID: 3014303006285454628}
   - {fileID: 1324755160791480784}
@@ -356,6 +357,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7215873902786320568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746896208276240976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6088a0e4f4cca53458b3bb1d763a658e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinRenderer: {fileID: 4729840874464467706}
+  skinMaterials:
+  - {fileID: 2100000, guid: 137c2b81056a4ff498df3e2df1975827, type: 2}
+  - {fileID: 2100000, guid: 68d20ce8bafa53a41bf599de5e3c42ca, type: 2}
+  - {fileID: 2100000, guid: d423ecbb127fef444b7aa4684549a11f, type: 2}
+  clothMaterials:
+  - {fileID: 2100000, guid: 5b2d78d9c25183d46a806c1204ad5908, type: 2}
+  - {fileID: 2100000, guid: 7b6a6a41bd813d14985298b97cdb07da, type: 2}
+  - {fileID: 2100000, guid: 08e179a8abad8c746bb15e09b1097a6f, type: 2}
 --- !u!1 &6821694448967306704
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,17 +874,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 137c2b81056a4ff498df3e2df1975827, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b2d78d9c25183d46a806c1204ad5908, type: 2}
     - target: {fileID: 8069756565645156405, guid: 9f1a5ad027a9f914d88858946224b2bd,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 129a6d8cc051d0e489ca61963393876b, type: 2}
+      objectReference: {fileID: 2100000, guid: 137c2b81056a4ff498df3e2df1975827, type: 2}
     - target: {fileID: 8069756565645156405, guid: 9f1a5ad027a9f914d88858946224b2bd,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 5b2d78d9c25183d46a806c1204ad5908, type: 2}
+      objectReference: {fileID: 2100000, guid: 129a6d8cc051d0e489ca61963393876b, type: 2}
     - target: {fileID: 8069756565645156405, guid: 9f1a5ad027a9f914d88858946224b2bd,
         type: 3}
       propertyPath: m_CastShadows
@@ -873,6 +895,12 @@ PrefabInstance:
 --- !u!4 &3014303006285454628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f1a5ad027a9f914d88858946224b2bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3341193599662701263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4729840874464467706 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8069756565645156405, guid: 9f1a5ad027a9f914d88858946224b2bd,
     type: 3}
   m_PrefabInstance: {fileID: 3341193599662701263}
   m_PrefabAsset: {fileID: 0}
