@@ -18,7 +18,11 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame() {
-        Application.Quit();
+        #if (UNITY_WEBGL)
+            Application.OpenURL("about:blank");
+        #else
+            Application.Quit();
+        #endif
     }
 
     public void ContinueGame() {

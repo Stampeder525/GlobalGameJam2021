@@ -26,6 +26,10 @@ public class EnterGrave : MonoBehaviour
 
     IEnumerator EndGame() {
         yield return new WaitForSeconds(0.2f);
-        Application.Quit();
+        #if (UNITY_WEBGL)
+            Application.OpenURL("about:blank");
+        #else
+            Application.Quit();
+        #endif
     }
 }
