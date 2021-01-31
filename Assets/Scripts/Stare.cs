@@ -15,6 +15,15 @@ public class Stare : MonoBehaviour
         target = GameObject.Find("Player").transform;
     }
 
+    void FixedUpdate() {
+        Vector3 dir = target.position - transform.position;
+        dir.y = transform.position.y;
+        Vector3 lookDir = Vector3.RotateTowards(transform.forward, target.position - transform.position, 0.5f * Time.deltaTime, 0f);
+        lookDir.y =0;
+        transform.rotation = Quaternion.LookRotation(lookDir);
+    }
+    
+
     void OnAnimatorIK(int layerIndex)
     {
         anim.SetLookAtWeight(stareWeight);
