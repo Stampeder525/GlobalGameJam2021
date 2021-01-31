@@ -682,6 +682,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2344878371000713617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997082869768255731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1fff54f6ea7a54c9c8efaca31c5cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  homeMaterials:
+  - {fileID: 2100000, guid: 4080ba457c9f0884c975dc218eecefd8, type: 2}
+  - {fileID: 2100000, guid: 77d9e6892d5149c42aea2dc4ed486726, type: 2}
+  - {fileID: 2100000, guid: cb6dfac20800aba4c8207819ce446e02, type: 2}
 --- !u!1 &1181247207086385226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,8 +5819,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: hOUSE_2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6785892478190075949, guid: 592b66f5ead23594d8e8173363e64b07,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592b66f5ead23594d8e8173363e64b07, type: 3}
+--- !u!1 &997082869768255731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6785892478190075949, guid: 592b66f5ead23594d8e8173363e64b07,
+    type: 3}
+  m_PrefabInstance: {fileID: 6051163167666092254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &476688021037097545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6154034672741620375, guid: 592b66f5ead23594d8e8173363e64b07,
