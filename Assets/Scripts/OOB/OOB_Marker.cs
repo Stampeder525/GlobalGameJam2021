@@ -18,11 +18,8 @@ public class OOB_Marker : OOB_Object
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Start()
+    protected override void Start()
     {
-        if (OOB_Manager.instance != null)
-            OOB_Manager.instance.AddOOBObject(this);
-
         ToggleObjectShown(false);
     }
 

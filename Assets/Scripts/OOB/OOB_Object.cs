@@ -11,6 +11,12 @@ public class OOB_Object : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    protected virtual void Start()
+    {
+        if (OOB_Manager.instance != null)
+            OOB_Manager.instance.AddOOBObject(this);
+    }
+
     public void ToggleObjectShown(bool toggle)
     {
         gameObject.SetActive(toggle);

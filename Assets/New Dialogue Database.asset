@@ -144,6 +144,28 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 6
+    fields:
+    - title: Name
+      value: Neighbor 5
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items: []
   locations: []
   variables:
@@ -229,6 +251,34 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: Number of people following the player
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 11
+    fields:
+    - title: Name
+      value: NeighborsToldOfDead
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: Number of people the player talked to about the dead body
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 12
+    fields:
+    - title: Name
+      value: Neighbor5Found
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
       type: 0
       typeString: CustomFieldType_Text
   conversations:
@@ -3403,7 +3453,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Child...
+        value: Child I apologize for my rudeness.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3545,7 +3595,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'You''re '
+        value: Of course ill help you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3796,7 +3846,7 @@ MonoBehaviour:
         +  1;
 
         Variable["NumAvailableFollowers"] = Variable["NumAvailableFollowers"]
-        + 2;;
+        + 2;
 
 '
       onExecute:
@@ -3805,7 +3855,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1025.3025
-        y: 702.5018
+        y: 701.6089
         width: 160
         height: 30
     - id: 11
@@ -3868,15 +3918,15 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: Variable["NeighborsToldOfBody"] >= 1 and  Variable["PlayerOutOfBody"]
-        == true
+      conditionsString: Variable["NeighborsComplete"] >= 4 and Variable["NeighborsToldOfDead"]
+        >= 1 and  Variable["PlayerOutOfBody"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1026.1118
+        x: 1027.0048
         y: 384.70078
         width: 160
         height: 30
