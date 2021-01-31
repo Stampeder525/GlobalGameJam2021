@@ -15,6 +15,7 @@ public class DisableMovement : MonoBehaviour
 
     public void StopMovement() {
         player.GetComponent<CustomCharacterController>().enabled = false;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<SwapViews>().enabled = false;
         player.GetComponent<ProximitySelector>().enabled = false;
     }

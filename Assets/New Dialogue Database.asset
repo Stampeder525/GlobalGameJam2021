@@ -1441,8 +1441,8 @@ MonoBehaviour:
         y: 101.36067
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 40.404022}
-    canvasZoom: 0.9899999
+    canvasScrollPosition: {x: 6.1348486, y: 1.4285458}
+    canvasZoom: 0.8999999
   - id: 2
     fields:
     - title: Title
@@ -2214,7 +2214,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["NeighborsComplete"] >= 1 and Variable["Neighbor2ItemFound"]
-        == true and and Variable["Neighbor5Found"] == false;
+        == true and Variable["Neighbor5Found"] == false;
       userScript: 
       onExecute:
         m_PersistentCalls:
