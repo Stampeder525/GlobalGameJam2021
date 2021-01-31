@@ -6130,39 +6130,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
         type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3961343220222773929}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054209282684357318, guid: babe60cf39d319e48885f58ced952cc8,
-        type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7433863603682519432, guid: babe60cf39d319e48885f58ced952cc8,
         type: 3}
       propertyPath: m_Name
