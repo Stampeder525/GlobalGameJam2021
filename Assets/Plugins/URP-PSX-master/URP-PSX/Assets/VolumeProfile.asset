@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a1bd58dd7548198609eabd8ae2bb7d, type: 3}
   m_Name: Pixelation
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   widthPixelation:
     m_OverrideState: 1
-    m_Value: 512
+    m_Value: 1130.8
   heightPixelation:
     m_OverrideState: 1
     m_Value: 256
   colorPrecision:
     m_OverrideState: 1
-    m_Value: 4.6
+    m_Value: 30.14
 --- !u!114 &-758010384845797820
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   fogDensity:
     m_OverrideState: 1
-    m_Value: 162.55
+    m_Value: 300.3
   fogDistance:
     m_OverrideState: 1
     m_Value: 10
@@ -108,4 +108,4 @@ MonoBehaviour:
     m_Value: 843
   noiseStrength:
     m_OverrideState: 1
-    m_Value: 0.029
+    m_Value: 85.99

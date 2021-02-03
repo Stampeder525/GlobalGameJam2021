@@ -10,7 +10,7 @@ public class RevealEnding : MonoBehaviour
     public bool show = true;
     private int neighborsComplete;
 
-    public GameObject target = null;
+    public List<GameObject> targets = new List<GameObject>();
     void Start()
     {
         
@@ -21,11 +21,15 @@ public class RevealEnding : MonoBehaviour
     {
         neighborsComplete = DialogueLua.GetVariable("NeighborsComplete").AsInt;
         if(neighborsComplete >= 5) {
-            if(target == null){
+            if(targets.Count == 0){
                 gameObject.SetActive(show);
             }
             else {
-                target.SetActive(show);
+                for(int i = 0; i < targets.Count; i++) {
+                    if(targets[i] != null) {
+                        targets[i].SetActive(show);
+                    }
+                }
             }
         } 
     }

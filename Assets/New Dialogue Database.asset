@@ -5506,7 +5506,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(tag=Item, true)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
